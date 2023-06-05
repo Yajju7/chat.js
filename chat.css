@@ -1,0 +1,145 @@
+/* chat.css */
+.widget {
+    width: 300px;
+    height: 500px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-body {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 10px;
+    padding-bottom: 0px;
+    overflow-y: auto;
+    /* position: relative; */
+}
+  
+  .widget-header {
+    background-color: #53a6ff;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    overflow-y: auto;
+    }
+  
+    .widget-footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #53a6ff;
+        color: #fff;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+    }
+  
+    .messages {
+        position: absolute;
+        /* top: 10px; */
+        top: 70px;
+        left: 10px;
+        right: 10px;
+        bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow-y: auto;
+        padding-bottom: 10px;
+        font-size: 13px;      
+    }
+  
+  .messageForm {
+    display: flex;
+    gap: 10px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .message {
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .sent-message {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-end;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .received-message {
+    background-color: #ffffff;
+    color: #333;
+    align-self: flex-start;
+    max-width: 70%;
+    word-wrap: break-word;
+    border: 1px solid #ccc;
+  }
+  
+
+  /* Add the new button styles */
+.widget-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .chat-icon.opened svg path {
+    fill: #FF6347;
+    animation: rotateSVG 0.4s forwards;
+  }
+  
+  /* Add the keyframes for the SVG animation */
+  @keyframes rotateSVG {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
